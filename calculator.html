@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Calculator</title>
+<style>
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .calculator {
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        max-width: 300px;
+    }
+    .calculator input {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        border: none;
+        border-bottom: 2px solid #ddd;
+        outline: none;
+    }
+    .calculator button {
+        width: calc(25% - 10px);
+        height: 48px;
+        font-size: 20px;
+        border: none;
+        background-color: #f5f5f5;
+        color: #000;
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+    }
+    .calculator button:hover {
+        background-color: #ddd;
+    }
+    .calculator .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="button-group">
+        <button onclick="clearDisplay()">Clr</button>
+        <button onclick="appendOperator('+')">+</button>
+        <button onclick="appendOperator('-')">-</button>
+        <button onclick="appendOperator('*')">*</button>
+    </div>
+    <div class="button-group">
+        <button onclick="appendNumber(7)">7</button>
+        <button onclick="appendNumber(8)">8</button>
+        <button onclick="appendNumber(9)">9</button>
+        <button onclick="appendOperator('/')">/</button>
+    </div>
+    <div class="button-group">
+        <button onclick="appendNumber(4)">4</button>
+        <button onclick="appendNumber(5)">5</button>
+        <button onclick="appendNumber(6)">6</button>
+        <button onclick="appendDecimal()">.</button>
+    </div>
+    <div class="button-group">
+        <button onclick="appendNumber(1)">1</button>
+        <button onclick="appendNumber(2)">2</button>
+        <button onclick="appendNumber(3)">3</button>
+        <button onclick="calculate()">=</button>
+    </div>
+    <div class="button-group">
+        <button onclick="appendNumber(0)">0</button>
+        <button onclick="deleteLast()">Del</button>
+    </div>
+</div>
+
+<script>
+    let currentInput = '';
+
+    function appendNumber(number) {
+        currentInput += number;
+        document.getElementById('display').value = currentInput;
+    }
+
+    function appendOperator(operator) {
+        if (currentInput !== '') {
+            currentInput += operator;
+            document.getElementById('display').value = currentInput;
+        }
+    }
+
+    function appendDecimal() {
+        if (!currentInput.includes('.')) {
+            currentInput += '.';
+            document.getElementById('display').value = currentInput;
+        }
+    }
+
+    function clearDisplay() {
+        currentInput = '';
+        document.getElementById('display').value = '';
+    }
+
+    function deleteLast() {
+        currentInput = currentInput.slice(0, -1);
+        document.getElementById('display').value = currentInput;
+    }
+
+    function calculate() {
+        try {
+            const result = eval(currentInput);
+            document.getElementById('display').value = result;
+            currentInput = result.toString();
+        } catch (error) {
+            document.getElementById('display').value = 'Error';
+        }
+    }
+
+    document.addEventListener('keydown', function(event) {
+        const key = event.key;
+        if (!isNaN(key) || key === '.') {
+            appendNumber(key);
+        } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+            appendOperator(key);
+        } else if (key === 'Enter') {
+            calculate();
+        } else if (key === 'Escape') {
+            clearDisplay();
+        } else if (key === 'Backspace') {
+            deleteLast();
+        }
+    });
+</script>
+
+</body>
+</html>
