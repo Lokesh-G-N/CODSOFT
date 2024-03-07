@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokesh's Landing Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.8px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column {
+    width: calc(33.33% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .column:hover {
+    transform: translateY(-5px);
+  }
+  
+  .column:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  
+  .column:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  .column h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .column p {
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .cta a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 18px;
+  }
+  
+  .cta a:hover {
+    background-color: #555;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .feature img {
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  .feature h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .feature p {
+    margin: 0;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Screen Crafted</h1>
+  <p>Where Creativity Meets Functionality</p>
+</header>
+
+<div class="container">
+  <div class="column">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/002/590/547/small/box-carton-delivery-line-style-icon-free-vector.jpg" alt="Product">
+    <h2>Discover Our Products</h2>
+    <p>Explore our wide range of products designed to meet your needs. From gadgets to accessories, we've got you covered.</p>
+    <a href="#">View Products</a>
+  </div>
+  <div class="column">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/002/595/744/small/people-team-community-and-partnership-line-icon-free-vector.jpg" alt="Community">
+    <h2>Join Our Community</h2>
+    <p>Connect with like-minded individuals in our vibrant community. Share your experiences, get tips, and stay updated with the latest trends.</p>
+    <a href="#">Join Now</a>
+  </div>
+  <div class="column">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/003/030/972/small/discount-or-instalment-sign-black-and-white-outline-icon-vector.jpg" alt="Offers">
+    <h2>Get Exclusive Offers</h2>
+    <p>Sign up for our newsletter to receive exclusive offers, discounts, and updates straight to your inbox. Don't miss out!</p>
+    <a href="#">Sign Up</a>
+  </div>
+</div>
+
+<div class="cta">
+  <a href="#">Sign Up Now</a>
+</div>
+
+<div class="container">
+  <div class="feature">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/026/468/776/small/number-1-icon-circle-illustration-isolated-on-white-background-number-one-icon-vector.jpg" alt="Feature Icon">
+    <div>
+      <h3>Feature 1: Personalized Recommendations</h3>
+      <p>Receive personalized product recommendations based on your preferences and browsing history.</p>
+    </div>
+  </div>
+  <div class="feature">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/026/468/763/small/number-2-icon-circle-illustration-isolated-on-white-background-number-two-icon-vector.jpg" alt="Feature Icon">
+    <div>
+      <h3>Feature 2: Easy Returns</h3>
+      <p>Enjoy hassle-free returns within 30 days of purchase. No questions asked!</p>
+    </div>
+  </div>
+  <div class="feature">
+    <img src="https://static.vecteezy.com/system/resources/previews/026/468/746/original/number-3-icon-circle-illustration-isolated-on-white-background-number-three-icon-vector.jpg" alt="Feature Icon">
+    <div>
+      <h3>Feature 3: 24/7 Customer Support</h3>
+      <p>Get assistance anytime, anywhere with our dedicated customer support team available round the clock.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 Screen Crafted. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokesh's Portfolio</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        color: #333;
+    }
+    header {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px 0;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+    header p {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+    section {
+        padding: 50px 0;
+    }
+    #about, #skills, #projects, #resume, #contact {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 10px;
+	text-align: center;
+        margin: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #about img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #about p {
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    #skills ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    #skills li {
+        display: inline-block;
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 8px 20px;
+        margin: 5px;
+        border-radius: 20px;
+    }
+    .project {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .project img {
+        max-width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .project:hover img {
+        transform: scale(1.05);
+    }
+    .project h3 {
+        margin-top: 20px;
+    }
+    .project p {
+        max-width: 600px;
+        margin: 10px auto;
+        line-height: 1.6;
+    }
+    #resume a {
+        background-color: #28a745;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+    }
+    #resume a:hover {
+        background-color: #218838;
+    }
+    #contact p {
+        margin: 10px 0;
+    }
+    footer {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px 0;
+        text-align: center;
+    }
+    footer p {
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Lokesh G N</h1>
+    <p>Web Developer</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="John Doe">
+    <p>I am a web developer with experience in HTML, CSS, JavaScript, and more. I enjoy creating responsive and user-friendly websites.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+        <li>UI/UX Design</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Project 1: Website Redesign</h3>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/020/782/473/small/project-management-icon-design-free-vector.jpg" alt="Project 1">
+        <p>Redesigned company website to improve user experience and increase conversion rates. Implemented responsive design principles to ensure compatibility across all devices.</p>
+    </div>
+    <div class="project">
+        <h3>Project 2: E-commerce Platform Development</h3>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/020/782/473/small/project-management-icon-design-free-vector.jpg" alt="Project 2">
+        <p>Developed a custom e-commerce platform from scratch, integrating payment gateways, product management systems, and order processing functionality. Utilized agile methodologies to deliver features incrementally and meet tight deadlines.</p>
+    </div>
+</section>
+
+<section id="resume">
+    <h2>Resume</h2>
+    <a href="LokeshResume.pdf" download>Download Resume</a>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: lokeshgn2.0@gmail.com</p>
+    <p>Phone: +91-73730 57438</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Lokesh's portfolio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
