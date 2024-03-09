@@ -4,10 +4,9 @@ Codsoft internship tasks
 
 Web Development
 
-1. Simple calculator
-2. Portfolio
-3. Landing page
-
+1. Portfolio
+2. Landing page
+3. Simple calculator
 
 
 Languages used:
